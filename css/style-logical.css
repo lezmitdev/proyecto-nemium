@@ -1,0 +1,64 @@
+:root{
+    --black: #000000;
+    --gray50: #212429;
+    --gray40: #212121;
+    --gray30: #424242;
+    --gray20: #616161;
+    --gray10: #808080;
+    --yellow:#FEC62E;
+}
+
+body{
+    color: var(--gray30);
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    font-size: 0.875em; 
+    color: var(--gray20);
+}
+header a{
+    color: #616161;
+    text-decoration: none;
+}
+header a:hover{
+    color :green;
+}
+nav details summary{
+    
+    font-weight: bold;
+}
+h1{
+    font-size: 3.75em;
+}
+h2{
+    font-size: 2em;
+}
+h3{
+    font-size: 1.5em;
+    
+}
+pre{
+    background-color: var(--yellow);
+}
+.hero{
+    background-image: linear-gradient(to top,rgba(255,255,255,.3), transparent),url('../images/pattern.png');
+    height: 350px;
+}
+
+.section-content{
+    counter-reset: titleList;
+}
+.section-content h3{
+    counter-increment: titleList;
+}
+.section-content h3::before{
+content: counter(titleList, decimal)". ";
+}
+.section-content h3::after{
+content: '';
+display: inline-block;
+width: 192px;
+height: 4px;
+background-color: var(--gray30);
+}
