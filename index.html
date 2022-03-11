@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style-physical.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./css/style-logical.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <title>Proyecto Nemium</title>
+    <meta property="og:title" content="Mi proyecto del Curso esencial de HTML y CSS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Todo lo que necesitas saber en tu día a día como Frontend" />
+    <meta property="og:url" content="https://lezmitdev.github.io/proyecto-nemium/" />
+    <meta property="og:image" content="https://lezmitdev.github.io/proyecto-nemium/images/dom.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href=".favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
     <div class="hero"></div>
@@ -140,13 +161,32 @@
 
                     <h3>Modelo de caja</h3>
                     <!--<video src="https://www.youtube.com/embed/5f5Ig_U2Bpk"></video>-->
-                    
+                    <div class="slider">
+                        <scroll-container class="slider-container">
+                            <scroll-page class="slider-slide" id="video-1">
+                                <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/5f5Ig_U2Bpk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </scroll-page>
+                            <scroll-page class="slider-slide" id="video-2">
+                                <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/5f5Ig_U2Bpk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </scroll-page>
+                            <scroll-page class="slider-slide" id="video-3">
+                                <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/5f5Ig_U2Bpk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </scroll-page>
+                        </scroll-container>
+                        <div class="slider-bullet-list">
+                            <a href="#video-1" class="slider-bullet"></a>
+                            <a href="#video-2" class="slider-bullet"></a>
+                            <a href="#video-3" class="slider-bullet"></a>
+                        </div>
+                    </div>
                     <p>Si tienes alguna pregunta escríbeme a <a class="email" target="_blank" href="mailto:me@leonidasesteban.com" >me@leonidasesteban.com</a></p>
-                    
-                    <h3>Suscríbete a nuestro newsletter</h3>
-                    <form class="form" action="">
-                        <input type="text" name="name" id="name" placeholder="Nombre">
-                        <input type="text" name="email" id="email" placeholder="Correo Electrónico">
+
+                </section>
+                <section >
+                    <h2>Suscríbete a nuestro newsletter</h2>
+                    <form class="form" action="#">
+                        <input type="text" name="name" id="name" requerid placeholder="Nombre">
+                        <input type="text"  requerid placeholder="Correo Electrónico">
                         <input type="submit" value=" Suscribirme"></input>
                     </form>
                 </section>
@@ -160,9 +200,9 @@
                 <div class="footer-content">
                     <h2>© Leonidas Esteban 2021</h2>
                     <div class="redes">
-                        <a href="#"><img src="./icons/instagram.png" alt="icon-instagram"></a>
-                        <a href="#"><img src="./icons/facebook.png" alt="icon-facebook"></a>
-                        <a href="#"><img class="twitter" src="./icons/twitter.png" alt="icon-twitter"></a>
+                        <a href="#"><img src="./icons/insta.png" alt="icon-instagram"></a>
+                        <a href="#"><img src="./icons/face.png" alt="icon-facebook"></a>
+                        <a href="#"><img class="twitter" src="./icons/twit.png" alt="icon-twitter"></a>
                     </div>
                     
                 </div>

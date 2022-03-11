@@ -1,53 +1,88 @@
 :root{
     --black: #000000;
-    --gray50: #212429;
-    --gray40: #212121;
-    --gray30: #424242;
-    --gray20: #616161;
-    --gray10: #808080;
-    --yellow:#FEC62E;
+    --gray30:#251F24;
+    --gray20: #3A3539;
+    --gray10: #A5A3A5;
+    --white: #ffffff;
+
 }
 
 body{
-    color: var(--gray30);
-    font-family: 'Roboto', sans-serif;
+    background-color: var(--gray30);
+    color: var(--gray10);
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+}
+.header{
+
+}
+header{
+    font-size: 14px;
+    margin-block-start: 20px;
 }
 
-header{
-    font-size: 0.875em; 
-    color: var(--gray20);
+header li{
+    margin-block-end: 16px;
 }
 header a{
-    color: #616161;
+    color: var(--gray10);
     text-decoration: none;
 }
 header a:hover{
-    color :green;
+    color :var(--white)
+}
+.header-content{
+    padding-inline: 27px;
+}
+nav details summary,h1,h2,h3,pre{
+    color: var(--white);
 }
 nav details summary{
     
     font-weight: bold;
 }
+a{
+    color: var(--white);
+}
+h1,h2,h3{
+    font-weight: normal;
+}
 h1{
-    font-size: 3.75em;
+    font-size: 40px;
+    margin-block-start: 48px;
+    margin-block-end: 16px;
 }
 h2{
     font-size: 2em;
+    margin-block-start: 48px;
+    margin-block: 40px;
 }
 h3{
     font-size: 1.5em;
-    
+    font-weight: 600;
+    margin-block: 16px;
+}
+hr{
+    display: none;
 }
 pre{
-    background-color: var(--yellow);
+    background-color: var(--gray20);
+    border-radius: 8px;
+    padding: 40px;
+   overflow: auto;
 }
 .hero{
-    background-image: linear-gradient(to top,rgba(255,255,255,.3), transparent),url('../images/pattern.png');
-    height: 350px;
+    background-image: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+    block-size: 96px;
 }
 
 .section-content{
     counter-reset: titleList;
+}
+.section-content img{
+    margin-block-start: 40px;
+    display: block;
+    max-inline-size: 100%;
 }
 .section-content h3{
     counter-increment: titleList;
@@ -55,10 +90,148 @@ pre{
 .section-content h3::before{
 content: counter(titleList, decimal)". ";
 }
-.section-content h3::after{
+/*.section-content h3::after{
 content: '';
 display: inline-block;
 width: 192px;
 height: 4px;
 background-color: var(--gray30);
+}*/
+blockquote{
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--white);
+    margin-block-start: 80px;
+    margin-block-end: 63px;
+    background-color: var(--gray20);
+    border-radius: 8px;
+    padding: 24px;
+}
+main{
+
+}
+.wrapper{
+max-inline-size: 902px;
+/*inline-size: ;width*/
+/*block-size: ;height*/
+margin: auto;
+}
+.main-content{
+padding-inline: 16px;
+}
+
+.slider{
+   
+
+}
+.slider-container{
+ 
+    display: block;
+    overflow: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    overflow-x: hidden;
+    font-size: 0;
+}
+.video{
+
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+.slider-bullet-list{
+    text-align: center;
+    margin-block-start: 10px;
+}
+.slider-bullet{
+    display: inline-block;
+    inline-size: 15px;
+    block-size: 15px;
+    background: white;
+    border-radius: 50%;
+}
+.form input{
+    box-sizing: border-box;
+    inline-size: 100%;
+    background-color: var(--gray30);
+    border: 1px solid var(--gray10);
+    border-radius: 8px;
+    color: var(--gray10);
+    padding-inline: 16px;
+    padding-block: 12px;
+    font-size: 16px;
+    display: block;
+    margin-block-end: 24px;
+}
+.form input[type="submit"]{
+    background-color: #157EFB;
+    border: none;
+    color: var(--white);
+}
+.form input::-webkit-input-placeholder{
+    color: var(--gray10);
+}
+footer{
+    background-color: var(--white);
+    padding-block-start: 48px;
+    padding-block-end: 61px;
+}
+.footer-content h2,.footer-content .redes a img{
+    color: var(--black);
+
+}
+.footer-content{
+    text-align: center;
+}
+.footer-content h2{
+    margin: 0 ;
+    margin-block-end: 19px;
+    font-weight: 400;
+}
+.redes a {
+    font-size: 0;
+}
+.redes a .twitter{
+    margin: 0;
+}
+.redes a img{
+    margin-inline-end: 18px;
+}
+@media screen and (min-width: 1366px) {
+    .hero{
+        block-size: 350px;
+    }
+    .header{
+        position: sticky;
+        inset-block-start: -45px;
+    }
+    header{
+  
+        position: absolute;
+        inset-block-start: 0; 
+        inset-inline-start: -188px;
+        inline-size: 208px;
+    }
+    .header-content{
+        position: relative;
+        inset-block-start: 65px;
+        padding-inline: 0;
+        
+    }
+    h1{
+        font-size: 60px;
+        margin-block-start: 64px;
+    }
+    hr{
+        margin-block:40px;
+        width: 636px;
+        border: 1px solid rgba(97, 97, 97,0.2);
+    }
+    footer{
+        padding-block-end: 45px;
+    }
+    
+    
 }
